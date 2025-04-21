@@ -1,1 +1,52 @@
-{"success": true, "deck_id": "y2lwi73lxqve", "remaining": 52, "shuffled": true}
+[
+    {
+        "code": "JC",
+        "image": "https://deckofcardsapi.com/static/img/JC.png",
+        "images": {
+            "svg": "https://deckofcardsapi.com/static/img/JC.svg",
+            "png": "https://deckofcardsapi.com/static/img/JC.png"
+        },
+        "value": "JACK",
+        "suit": "CLUBS"
+    },
+    {
+        "code": "5D",
+        "image": "https://deckofcardsapi.com/static/img/5D.png",
+        "images": {
+            "svg": "https://deckofcardsapi.com/static/img/5D.svg",
+            "png": "https://deckofcardsapi.com/static/img/5D.png"
+        },
+        "value": "5",
+        "suit": "DIAMONDS"
+    },
+    {
+        "code": "7D",
+        "image": "https://deckofcardsapi.com/static/img/7D.png",
+        "images": {
+            "svg": "https://deckofcardsapi.com/static/img/7D.svg",
+            "png": "https://deckofcardsapi.com/static/img/7D.png"
+        },
+        "value": "7",
+        "suit": "DIAMONDS"
+    },
+    {
+        "code": "5S",
+        "image": "https://deckofcardsapi.com/static/img/5S.png",
+        "images": {
+            "svg": "https://deckofcardsapi.com/static/img/5S.svg",
+            "png": "https://deckofcardsapi.com/static/img/5S.png"
+        },
+        "value": "5",
+        "suit": "SPADES"
+    },
+    {
+        "code": "5H",
+        "image": "https://deckofcardsapi.com/static/img/5H.png",
+        "images": {
+            "svg": "https://deckofcardsapi.com/static/img/5H.svg",
+            "png": "https://deckofcardsapi.com/static/img/5H.png"
+        },
+        "value": "5",
+        "suit": "HEARTS"
+    }
+]
