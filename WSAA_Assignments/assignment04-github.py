@@ -1,38 +1,40 @@
-# Assignment 4
+# Assignment 4 - A Python program that reads a file from a repository
+# Replaces all occurrences of the text "andrew" with "ebele"
+# Commits the updated file back to the repository.
 
 # import dependencies
 from github import Github
-import requests 
-import json 
-import re
+import requests
 from config import apikeys as cfg
 
-apikey = cfg["githubkeyab"] # import the api key from the config file
+# import the api key from the config file
+apikey = cfg["githubkey"]
 
+#authenticate with the GitHub API key
 g = Github(apikey)
 
-#ab_repo = g.get_repo("Gtalen/wsaa-course-material-2024")
+# Access repository with HTTPS GET method
+repo = g.get_repo("Gtalen/Authentication-testin")
+#print (repo.clone_url) # print the clone url of the repository
+
+file_info = repo.get_contents("ab.txt") # get the contents of the file ab.txt
+urloffile = file_info.download_url # get the download url of the file ab.txt
+print (urloffile)
 
 
+response = requests.get(urloffile)
+file_content = response.text # get the content of the file ab.txt
+#print (file_content)
 
-apikey = cfg["githubkeyab"] # import the api key from the config file
+content_update = file_content.replace("andrew", "ebele") #replace andrew with ebele in the response
+#print (file_edit)
 
-url = "https://api.github.com/repos/Gtalen/wsaa-course-material-2024"
+# update content of the file on github
+repo.update_file(file_info.path, "Replaced andrew with ebele in Ab text file ", content_update, file_info.sha)
 
-#url = "https://api.github.com/users/andrewbeattycourseware/repos?perpage=100"
-
-response = requests.get(url, auth = ("token", apikey)) 
-print (response.status_code) #check if response is succesful
-
-responses = response.text #convert the response to json format
-print (responses) #print response 
-
-ab_response = responses.replace("andrew", "ebele") #replace andrew with ebele in the response
-
-# Save the response to a file and open as ab
-with open ("ab_response.json", "w") as ab:  # open file in write mode
- json.dump(ab_response, ab, indent=4)  # save the JSON data to the file
-
-
-
-
+# check if the content has changed using a for loop
+if file_content != content_update: #
+    print("Update committed.")
+else:
+    print("No changes to commit.")
+g = Github(apikey)

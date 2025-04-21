@@ -1,0 +1,290 @@
+[
+    {
+        "name": "WSAA07.01 Data layer.pptx",
+        "path": "slides/WSAA07.01 Data layer.pptx",
+        "sha": "9c169fc46152b59b055f5ce10e37e7398a11ee1f",
+        "size": 386719,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA07.01%20Data%20layer.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA07.01%20Data%20layer.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/9c169fc46152b59b055f5ce10e37e7398a11ee1f",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA07.01%20Data%20layer.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA07.01%20Data%20layer.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/9c169fc46152b59b055f5ce10e37e7398a11ee1f",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA07.01%20Data%20layer.pptx"
+        }
+    },
+    {
+        "name": "WSAA07.02 databases.pptx",
+        "path": "slides/WSAA07.02 databases.pptx",
+        "sha": "080416ce40da4011b8f5b8c9a56ca119bc5acd69",
+        "size": 351811,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA07.02%20databases.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA07.02%20databases.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/080416ce40da4011b8f5b8c9a56ca119bc5acd69",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA07.02%20databases.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA07.02%20databases.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/080416ce40da4011b8f5b8c9a56ca119bc5acd69",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA07.02%20databases.pptx"
+        }
+    },
+    {
+        "name": "WSAA07.03 python and SQL.pptx",
+        "path": "slides/WSAA07.03 python and SQL.pptx",
+        "sha": "7e1bc02347d35365269a2ea8aa3cf7a2390719cd",
+        "size": 361218,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA07.03%20python%20and%20SQL.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA07.03%20python%20and%20SQL.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/7e1bc02347d35365269a2ea8aa3cf7a2390719cd",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA07.03%20python%20and%20SQL.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA07.03%20python%20and%20SQL.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/7e1bc02347d35365269a2ea8aa3cf7a2390719cd",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA07.03%20python%20and%20SQL.pptx"
+        }
+    },
+    {
+        "name": "WSAA2.1 XML,JSON and CSV_.pptx",
+        "path": "slides/WSAA2.1 XML,JSON and CSV_.pptx",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.1%20XML,JSON%20and%20CSV_.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.1%20XML,JSON%20and%20CSV_.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA2.1%20XML%2CJSON%20and%20CSV_.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.1%20XML,JSON%20and%20CSV_.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.1%20XML,JSON%20and%20CSV_.pptx"
+        }
+    },
+    {
+        "name": "WSAA2.2 XML_.pptx",
+        "path": "slides/WSAA2.2 XML_.pptx",
+        "sha": "e77efa14ff18f7ceeb9d9433115db3a2fb403539",
+        "size": 373954,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.2%20XML_.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.2%20XML_.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/e77efa14ff18f7ceeb9d9433115db3a2fb403539",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA2.2%20XML_.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.2%20XML_.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/e77efa14ff18f7ceeb9d9433115db3a2fb403539",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.2%20XML_.pptx"
+        }
+    },
+    {
+        "name": "WSAA2.3 consuming xml_.pptx",
+        "path": "slides/WSAA2.3 consuming xml_.pptx",
+        "sha": "ef3e299a8c3a505e4c5a53049ae8377f1450116e",
+        "size": 387006,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.3%20consuming%20xml_.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.3%20consuming%20xml_.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/ef3e299a8c3a505e4c5a53049ae8377f1450116e",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA2.3%20consuming%20xml_.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.3%20consuming%20xml_.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/ef3e299a8c3a505e4c5a53049ae8377f1450116e",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.3%20consuming%20xml_.pptx"
+        }
+    },
+    {
+        "name": "WSAA2.4 JSON slides_.pptx",
+        "path": "slides/WSAA2.4 JSON slides_.pptx",
+        "sha": "e605869278a3aefdafbad59333fe2066341de60b",
+        "size": 358729,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.4%20JSON%20slides_.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.4%20JSON%20slides_.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/e605869278a3aefdafbad59333fe2066341de60b",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA2.4%20JSON%20slides_.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA2.4%20JSON%20slides_.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/e605869278a3aefdafbad59333fe2066341de60b",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA2.4%20JSON%20slides_.pptx"
+        }
+    },
+    {
+        "name": "WSAA3.1 Theory-HTTP and URL.pptx",
+        "path": "slides/WSAA3.1 Theory-HTTP and URL.pptx",
+        "sha": "237ec05fef13d4b5c0b101351af77ce8796f3f84",
+        "size": 414484,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.1%20Theory-HTTP%20and%20URL.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.1%20Theory-HTTP%20and%20URL.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/237ec05fef13d4b5c0b101351af77ce8796f3f84",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA3.1%20Theory-HTTP%20and%20URL.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.1%20Theory-HTTP%20and%20URL.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/237ec05fef13d4b5c0b101351af77ce8796f3f84",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.1%20Theory-HTTP%20and%20URL.pptx"
+        }
+    },
+    {
+        "name": "WSAA3.2 Theory-HTTP methods and codes.pptx",
+        "path": "slides/WSAA3.2 Theory-HTTP methods and codes.pptx",
+        "sha": "68ded5b3a52c9290d13403858d67712b3e153a64",
+        "size": 405661,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.2%20Theory-HTTP%20methods%20and%20codes.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.2%20Theory-HTTP%20methods%20and%20codes.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/68ded5b3a52c9290d13403858d67712b3e153a64",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA3.2%20Theory-HTTP%20methods%20and%20codes.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.2%20Theory-HTTP%20methods%20and%20codes.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/68ded5b3a52c9290d13403858d67712b3e153a64",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.2%20Theory-HTTP%20methods%20and%20codes.pptx"
+        }
+    },
+    {
+        "name": "WSAA3.3 Rest slides.pptx",
+        "path": "slides/WSAA3.3 Rest slides.pptx",
+        "sha": "aa73931bc7cd139e6388d5f4d87a11f190cd83eb",
+        "size": 364289,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.3%20Rest%20slides.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.3%20Rest%20slides.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/aa73931bc7cd139e6388d5f4d87a11f190cd83eb",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA3.3%20Rest%20slides.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.3%20Rest%20slides.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/aa73931bc7cd139e6388d5f4d87a11f190cd83eb",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.3%20Rest%20slides.pptx"
+        }
+    },
+    {
+        "name": "WSAA3.4 Curl.pptx",
+        "path": "slides/WSAA3.4 Curl.pptx",
+        "sha": "4e12b2d60534c135f1eebd502ccd9471a722ce5f",
+        "size": 354136,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.4%20Curl.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.4%20Curl.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/4e12b2d60534c135f1eebd502ccd9471a722ce5f",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA3.4%20Curl.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA3.4%20Curl.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/4e12b2d60534c135f1eebd502ccd9471a722ce5f",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA3.4%20Curl.pptx"
+        }
+    },
+    {
+        "name": "WSAA4.1 API consuming with python_.pptx",
+        "path": "slides/WSAA4.1 API consuming with python_.pptx",
+        "sha": "0d8a5921c874dae3e4f98ee9788b6ded5db8b4fa",
+        "size": 364219,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA4.1%20API%20consuming%20with%20python_.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA4.1%20API%20consuming%20with%20python_.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/0d8a5921c874dae3e4f98ee9788b6ded5db8b4fa",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA4.1%20API%20consuming%20with%20python_.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA4.1%20API%20consuming%20with%20python_.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/0d8a5921c874dae3e4f98ee9788b6ded5db8b4fa",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA4.1%20API%20consuming%20with%20python_.pptx"
+        }
+    },
+    {
+        "name": "WSAA4.2 APIs in the wild irish gov_.pptx",
+        "path": "slides/WSAA4.2 APIs in the wild irish gov_.pptx",
+        "sha": "8949db2d644835e274e2b0894770d3c4dee1849e",
+        "size": 352132,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA4.2%20APIs%20in%20the%20wild%20irish%20gov_.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA4.2%20APIs%20in%20the%20wild%20irish%20gov_.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/8949db2d644835e274e2b0894770d3c4dee1849e",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA4.2%20APIs%20in%20the%20wild%20irish%20gov_.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA4.2%20APIs%20in%20the%20wild%20irish%20gov_.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/8949db2d644835e274e2b0894770d3c4dee1849e",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA4.2%20APIs%20in%20the%20wild%20irish%20gov_.pptx"
+        }
+    },
+    {
+        "name": "WSAA4.3 APIs in the wild cso_.pptx",
+        "path": "slides/WSAA4.3 APIs in the wild cso_.pptx",
+        "sha": "607c8089f5249079cbc1a562dd91b36bc0405788",
+        "size": 358686,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA4.3%20APIs%20in%20the%20wild%20cso_.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA4.3%20APIs%20in%20the%20wild%20cso_.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/607c8089f5249079cbc1a562dd91b36bc0405788",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA4.3%20APIs%20in%20the%20wild%20cso_.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA4.3%20APIs%20in%20the%20wild%20cso_.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/607c8089f5249079cbc1a562dd91b36bc0405788",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA4.3%20APIs%20in%20the%20wild%20cso_.pptx"
+        }
+    },
+    {
+        "name": "WSAA5.1 Authentication.pptm",
+        "path": "slides/WSAA5.1 Authentication.pptm",
+        "sha": "cb7caf3207c748ba05901f2162f8bbafa103810f",
+        "size": 601383,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA5.1%20Authentication.pptm?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA5.1%20Authentication.pptm",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/cb7caf3207c748ba05901f2162f8bbafa103810f",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA5.1%20Authentication.pptm",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA5.1%20Authentication.pptm?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/cb7caf3207c748ba05901f2162f8bbafa103810f",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA5.1%20Authentication.pptm"
+        }
+    },
+    {
+        "name": "WSAA5.2 GitHub webservice.pptx",
+        "path": "slides/WSAA5.2 GitHub webservice.pptx",
+        "sha": "852a490a288ddee2e40f7aa425fd0c1ca499d667",
+        "size": 347805,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA5.2%20GitHub%20webservice.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA5.2%20GitHub%20webservice.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/852a490a288ddee2e40f7aa425fd0c1ca499d667",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA5.2%20GitHub%20webservice.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA5.2%20GitHub%20webservice.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/852a490a288ddee2e40f7aa425fd0c1ca499d667",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA5.2%20GitHub%20webservice.pptx"
+        }
+    },
+    {
+        "name": "WSAA5.3 using packages.pptx",
+        "path": "slides/WSAA5.3 using packages.pptx",
+        "sha": "72f33e10814b83f8259e532964855669b6aabd2f",
+        "size": 349004,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA5.3%20using%20packages.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA5.3%20using%20packages.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/72f33e10814b83f8259e532964855669b6aabd2f",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA5.3%20using%20packages.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA5.3%20using%20packages.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/72f33e10814b83f8259e532964855669b6aabd2f",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA5.3%20using%20packages.pptx"
+        }
+    },
+    {
+        "name": "WSAA6.5 REST for project.pptx",
+        "path": "slides/WSAA6.5 REST for project.pptx",
+        "sha": "693bd17e7baad7d8cc7d2d5dc536aabd1f91abe3",
+        "size": 364717,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA6.5%20REST%20for%20project.pptx?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA6.5%20REST%20for%20project.pptx",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/693bd17e7baad7d8cc7d2d5dc536aabd1f91abe3",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/slides/WSAA6.5%20REST%20for%20project.pptx",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides/WSAA6.5%20REST%20for%20project.pptx?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/693bd17e7baad7d8cc7d2d5dc536aabd1f91abe3",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/slides/WSAA6.5%20REST%20for%20project.pptx"
+        }
+    }
+]

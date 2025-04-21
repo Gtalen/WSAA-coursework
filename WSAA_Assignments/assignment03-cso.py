@@ -1,6 +1,6 @@
 # Assignment 3 - CSO Exchequer Account API Data import
-# Program that retrieves the dataset for the "exchequer account (historical series)" from the CSO
-# Stores it into a file called "cso.json
+# Python Program that retrieves the dataset for the "exchequer account (historical series)" from the CSO API
+# and stores it into a file called "cso.json"
 
 # Import dependencies
 import requests

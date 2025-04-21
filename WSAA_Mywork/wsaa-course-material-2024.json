@@ -1,0 +1,82 @@
+[
+    {
+        "name": ".gitignore",
+        "path": ".gitignore",
+        "sha": "bc8bd2d0b0160900752b8badde008f52844f2f50",
+        "size": 3088,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/.gitignore?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/.gitignore",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/bc8bd2d0b0160900752b8badde008f52844f2f50",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/.gitignore",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/.gitignore?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/bc8bd2d0b0160900752b8badde008f52844f2f50",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/.gitignore"
+        }
+    },
+    {
+        "name": "README.md",
+        "path": "README.md",
+        "sha": "fd7051ab631e7f88543d67ee67e932248dfa3f1c",
+        "size": 73,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/README.md?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/README.md",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/fd7051ab631e7f88543d67ee67e932248dfa3f1c",
+        "download_url": "https://raw.githubusercontent.com/Gtalen/wsaa-course-material-2024/main/README.md",
+        "type": "file",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/README.md?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/blobs/fd7051ab631e7f88543d67ee67e932248dfa3f1c",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/blob/main/README.md"
+        }
+    },
+    {
+        "name": "code",
+        "path": "code",
+        "sha": "11f2f128c96087a568ebbac3ad6ae939d522e07f",
+        "size": 0,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/code?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/tree/main/code",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/trees/11f2f128c96087a568ebbac3ad6ae939d522e07f",
+        "download_url": null,
+        "type": "dir",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/code?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/trees/11f2f128c96087a568ebbac3ad6ae939d522e07f",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/tree/main/code"
+        }
+    },
+    {
+        "name": "labs",
+        "path": "labs",
+        "sha": "50646a44ce3bc609d5ad0b113fe2789937bb3bee",
+        "size": 0,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/labs?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/tree/main/labs",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/trees/50646a44ce3bc609d5ad0b113fe2789937bb3bee",
+        "download_url": null,
+        "type": "dir",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/labs?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/trees/50646a44ce3bc609d5ad0b113fe2789937bb3bee",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/tree/main/labs"
+        }
+    },
+    {
+        "name": "slides",
+        "path": "slides",
+        "sha": "f3d83d60445a1d5af4cd72d359f8273d1f6698db",
+        "size": 0,
+        "url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides?ref=main",
+        "html_url": "https://github.com/Gtalen/wsaa-course-material-2024/tree/main/slides",
+        "git_url": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/trees/f3d83d60445a1d5af4cd72d359f8273d1f6698db",
+        "download_url": null,
+        "type": "dir",
+        "_links": {
+            "self": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/contents/slides?ref=main",
+            "git": "https://api.github.com/repos/Gtalen/wsaa-course-material-2024/git/trees/f3d83d60445a1d5af4cd72d359f8273d1f6698db",
+            "html": "https://github.com/Gtalen/wsaa-course-material-2024/tree/main/slides"
+        }
+    }
+]

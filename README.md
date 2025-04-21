@@ -13,11 +13,11 @@ This repository contains my assignments and project submissions for the Web Serv
 
 ## Assignments
 
-- Assignment 2:  A Python program that interacts with the [deck of card API](https://deckofcardsapi.com/). t shuffles a deck, draws cards, and displays each card's value and suit. This can be accessed here [Assignment2_carddraw.ipynb](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Assignments/Assignment2_carddraw.ipynb).
+- Assignment 2:  A Python program that interacts with the [deck of card API](https://deckofcardsapi.com/). It shuffles a deck, draws cards, and displays each card's value and suit. This can be accessed here [Assignment2_carddraw.ipynb](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Assignments/Assignment2_carddraw.ipynb).
 
 - Assignment 3: A Python program that retrieves the dataset for the Exchequer Account (Historical Series) from the CSO API. The data is stored in a file named  [cso.json](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Assignments/cso.json). The program can be accessed here [assignment03-cso.py](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Assignments/assignment03-cso.py).
 
-- Assignment 4:  A Python program that reads a file from Andrew Beatty’s WSAA forked repository, replaces all occurrences of the text "Andrew" with "Ebele", and commits the updated file back to the repository. [assignment04-github.py](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Assignments/assignment04-github.py)
+- Assignment 4:  A Python program that reads a file from the repository [Gtalen/Authentication-testin](https://github.com/Gtalen/Authentication-testin/blob/main/ab.txt), replaces all occurrences of the text "andrew" with "ebele", and commits the updated file back to the repository. [assignment04-github.py](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Assignments/assignment04-github.py)
 
 ## Dependencies
 - Requests
