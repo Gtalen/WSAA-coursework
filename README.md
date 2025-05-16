@@ -19,6 +19,10 @@ This repository contains my assignments and project submissions for the Web Serv
 
 - Assignment 4:  A Python program that reads a file from the repository [Gtalen/Authentication-testin](https://github.com/Gtalen/Authentication-testin/blob/main/ab.txt), replaces all occurrences of the text "andrew" with "ebele", and commits the updated file back to the repository. [assignment04-github.py](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Assignments/assignment04-github.py)
 
+
+## Project - Investment Portfolio Manager(IPM)
+
+
 ## Dependencies
 - Requests
 - JSON
@@ -32,7 +36,7 @@ This repository contains my assignments and project submissions for the Web Serv
 - Python
 
 ## Contributors
-Ebelechukwu Chidimma Igwagu: Author
+Author: Ebelechukwu Chidimma Igwagu
 
 ### Want to contribute?
 
