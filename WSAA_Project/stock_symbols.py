@@ -47,3 +47,13 @@ for stock in stocks:
     display_name = stock.get("displayName")
     longName = stock.get("longName")
     print(f"{symbol}, {display_name}, {longName}")
+
+
+
+
+"""
+------------
+References:
+------------
+- Yahoo Finance Screeners (18.05.2025). https://finance.yahoo.com/research-hub/screener/.
+"""

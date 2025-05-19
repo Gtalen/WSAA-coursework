@@ -23,7 +23,7 @@ def connect_mysql():
             host='localhost',
             user='root',
             password='root',
-            #database='appDBproj',  # SQL database name
+            database='investment_portfolio_db',  # SQL database name
             cursorclass=pymysql.cursors.DictCursor #sets the cursor to the dict cursor
         )
         #print("Connection to the database is succesful.")
