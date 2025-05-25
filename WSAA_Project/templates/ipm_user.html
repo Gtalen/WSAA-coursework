@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User Account</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+{% extends "ipm_base.html" %}
+{% block title %}User Account{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">User Account Management</h2>
+
     <style>
         .form-container {
             max-width: 33.33%; /* 1/3 of screen */
         }
     </style>
-</head>
-<body>
+
     <div class="container mt-5">
-        <h1>User Account</h1>
+        <h3> Create User Account</h3>
 
         <div class="form-container">
            
@@ -28,6 +25,7 @@
                 <input type="email" name="email" id="email" class="form-control mb-2" placeholder="Email" required>
                 <input type="date" name="dob" id="dob" class="form-control mb-3" placeholder="Date of Birth" required>
                 <button type="submit" class="btn btn-primary btn-block mb-2">Create Account</button>
+                <button type="reset" class="btn btn-secondary btn-block">Reset</button>
             </form>
             <div id="message" class="mt-2"></div>
         </div>
@@ -71,12 +69,9 @@
       </div>
     </div>
   </div>
-  
+    {% endblock %}
 
-    <!-- Bootstrap 5 bundle for modal -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    {% block scripts %}
     <script>
          // Submit handler for the Create User form
         document.getElementById("CreateAccount").addEventListener("submit", async function(e) {
@@ -211,5 +206,4 @@
     window.onload = fetchUsers;
 
 </script>
-</body>
-</html>
+{% endblock %}
