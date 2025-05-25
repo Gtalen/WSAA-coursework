@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect, render_template
 from flask_cors import CORS, cross_origin
 from users_dao import UsersDAO
 from stocks_dao import StocksDAO
@@ -7,18 +7,26 @@ from werkzeug.security import generate_password_hash
 
 
 app = Flask(__name__)
-CORS(app) # Enable CORS for all routes
+#CORS(app) # Enable CORS for all routes
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
+
 
 users_dao = UsersDAO()
 stocks_dao = StocksDAO()
 transactions_dao = TransactionsDAO()
 
-@app.route("/")
-def index():
-    return "Welcome to the IPM API!"
+# curl http://127.0.0.1:5000/
+@app.route("/", methods=['GET'])
+def home():
+    return render_template("ipm_base.html")
+
 
 
 # USER ROUTES
+
+@app.route("/api/user/form", methods=['GET'])
+def user_form():
+    return render_template("ipm_user.html")
 
 # Get all users
 # curl "http://127.0.0.1:5000/api/users"
@@ -50,28 +58,44 @@ def get_user_by_email():
         return jsonify({"error": "User not found"}), 404
     return jsonify(user), 200
 
-# Create new User
-# curl -i -H "Content-Type: application/json" -X POST -d '{"fullname": "John Owen", "username": "jowen", "email": "jowen@hotmail.com", "dob": "22-06-2002", "password_hash": "superSecret123"}' http://127.0.0.1:5000/api/users
-@app.route("/api/users", methods=["POST"])
+
+# Create new user
+
+@app.route("/api/users/new-user", methods=["GET", "POST"])
 def create_user():
-    if not request.json:
-        return jsonify({"error": "Invalid input"}), 400
-    user = {
-        "fullname": request.json.get("fullname"),
-        "username": request.json.get("username"),
-        "email": request.json.get("email"),
-         "password_hash": generate_password_hash(request.json.get("password_hash")),
-        "dob": request.json.get("dob"),
-    }
-    new_user = users_dao.create_user(user)
+    if request.method == 'POST':
+        firstname = request.form.get('firstname')
+        lastname = request.form.get('lastname')
+        fullname = f"{firstname} {lastname}"
+        username = request.form.get('username')
+        password = request.form.get('password')
+        email = request.form.get('email')
+        dob = request.form.get('dob')
 
-    if new_user is None:
-        return jsonify({"error": "Failed to create user"}), 500
+        if not password:
+            return jsonify({"message": "Error: Password is required."}), 400
 
-    return jsonify({"user_id": new_user}), 201
+        password_hash = generate_password_hash(password)
+
+        user_data = {
+            "fullname": fullname,
+            "username": username,
+            "email": email,
+            "password_hash": password_hash,
+            "dob": dob
+        }
+
+        new_user_id = users_dao.create_user(user_data)
+        if new_user_id is None:
+            return jsonify({"message": "Error: Could not create user."}), 500
+
+        return jsonify({"message": "User account created successfully!"}), 200
+
+    # For GET requests, render the form page
+    return render_template("ipm_user.html")
 
 
-# Reset User password
+# update user
 # curl -i -H "Content-Type: application/json" -X PUT -d '{"email": "jowen@hotmail.com", "new_password": "SuperSecure456"}' http://127.0.0.1:5000/api/users/reset_password
 @app.route("/api/users/reset_password", methods=["PUT"])
 def reset_password():
@@ -109,6 +133,11 @@ def delete_user(user_id):
 
 
 # STOCK ROUTES
+
+# Render stock form
+@app.route("/api/stocks/form", methods=['GET'])
+def stock_form():
+    return render_template("ipm_stock.html")
 
 # Create a new stock
 # curl -X POST http://127.0.0.1:5000/api/stocks -H "Content-Type: application/json" -d '{"stock_symbol": "BIRG", "stock_short_name": "BOI BIRG", "stock_company_name": "BANK OF IRELAND GP"}'
@@ -160,6 +189,38 @@ def list_all_stocks():
     stocks = stocks_dao.list_all_stocks()
     return jsonify(stocks)
 
+# Get user stock holding
+# curl "http://127.0.0.1:5000/api/user_stock_holding?user_id=1&stock_id=2"
+@app.route("/api/user_stock_holding", methods=["GET"])
+def get_user_stock_holding():
+    user_id = request.args.get("user_id", type=int)
+    stock_id = request.args.get("stock_id", type=int)
+
+    if user_id is None or stock_id is None:
+        return jsonify({"error": "Missing user_id or stock_id"}), 400
+
+    quantity = stocks_dao.get_user_stock_holding(user_id, stock_id)
+    return jsonify({"holding": quantity})
+
+# Update a stock
+# curl -X PUT http:///127.0.0.1:5000/api/stocks/1
+@app.route("/api/stocks/<int:stock_id>", methods=["PUT"])
+def update_stock(stock_id):
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "Missing required stock data"}), 400
+
+    updated = stocks_dao.update_stock(stock_id, (
+        data["stock_symbol"],
+        data["stock_short_name"],
+        data["stock_company_name"]
+    ))
+    
+    if not updated:
+        return jsonify({"error": "Stock not found or could not be updated"}), 404
+
+    return jsonify({"message": "Stock updated successfully"}), 200
+
 
 # Delete a stock by ID
 # curl -X DELETE http://127.0.0.1:5000/api/stocks/51
@@ -172,22 +233,39 @@ def delete_stock(stock_id):
         return jsonify({"error": "Stock not found or could not be deleted"}), 404
 
 
-# TRANDSACTION ROUTES
+# TRANSACTION ROUTES
+
+# Render transaction form
+@app.route("/api/transactions/form", methods=['GET'])
+def transaction_form():
+    return render_template("ipm_transaction.html")
 
 # Create transaction
 # curl curl -X POST http://127.0.0.1:5000/api/transactions -H "Content-Type: application/json" -d '{"user_id":1,"stock_id":2,"transaction_type":"buy","quantity":10,"price_per_share":150.50}'
+
 @app.route("/api/transactions", methods=["POST"])
 def create_transaction():
     if not request.json:
         return jsonify({"error": "Invalid input"}), 400
     
     data = request.json
+    user_id = data.get("user_id")
+    stock_id = data.get("stock_id")
+    transaction_type = data.get("transaction_type")
+    quantity = data.get("quantity")
+    price_per_share = data.get("price_per_share")
+
+    if transaction_type == 'sell':
+        current_qty = stocks_dao.get_user_stock_holding(user_id, stock_id)
+        if quantity > current_qty:
+            return jsonify({"error": "Insufficient shares to sell"}), 400
+
     transaction_data = (
-        data.get("user_id"),
-        data.get("stock_id"),
-        data.get("transaction_type"),
-        data.get("quantity"),
-        data.get("price_per_share")
+        user_id,
+        stock_id,
+        transaction_type,
+        quantity,
+        price_per_share
     )
     new_id = transactions_dao.create_transaction(transaction_data)
     if new_id:
@@ -208,6 +286,8 @@ def get_transaction(transaction_id):
 @app.route("/api/transactions/user/<int:user_id>", methods=["GET"])
 def get_transactions_by_user(user_id):
     transactions = transactions_dao.get_transactions_by_user_id(user_id)
+    if transactions is None:
+        return jsonify({"error": "Database error occurred"}), 500
     return jsonify(transactions)
 
 # Get transactions by stock ID
