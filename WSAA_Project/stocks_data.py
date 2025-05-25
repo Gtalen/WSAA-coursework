@@ -40,5 +40,9 @@ def generate_stocks_data():
         print("Failed to connect to the database.")
 
 
+def main():
+    generate_stocks_data()  # Generate and insert stock data
 
+if __name__ == "__main__":
+    main()
 
