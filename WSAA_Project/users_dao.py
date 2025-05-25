@@ -10,7 +10,7 @@ It includes methods for creating, reading, updating, and deleting (CRUD) user re
 
 import pymysql
 import sql_connect # Connect to MySQL database
-
+from werkzeug.security import generate_password_hash
 
 class UsersDAO:
     def __init__(self):
@@ -22,8 +22,8 @@ class UsersDAO:
 
     def create_user(self, user_data):
         """
-        user_data: tuple or list containing
-        (fullname, username, email, password_hash, dob)
+        user_data: dict containing keys
+        ('fullname', 'username', 'email', 'password_hash', 'dob')
         """
         try:
             with self.conn.cursor() as cursor:
@@ -31,7 +31,13 @@ class UsersDAO:
                     INSERT INTO users (fullname, username, email, password_hash, dob)
                     VALUES (%s, %s, %s, %s, %s)
                 """
-                cursor.execute(sql, user_data)
+                cursor.execute(sql, (
+                    user_data["fullname"],
+                    user_data["username"],
+                    user_data["email"],
+                    user_data["password_hash"],
+                    user_data["dob"],
+                ))
                 self.conn.commit()
                 return cursor.lastrowid
         except pymysql.MySQLError as e:
@@ -39,6 +45,20 @@ class UsersDAO:
             self.conn.rollback()
             return None
 
+
+    def get_all_users(self):
+        try:
+            with self.conn.cursor() as cursor:
+                sql = """
+                    SELECT user_id, fullname, username, email, dob, created_at
+                    FROM users
+                """
+                cursor.execute(sql)
+                return cursor.fetchall()
+        except pymysql.MySQLError as e:
+            print(f"[ERROR] get_all_users: {e}")
+            return None 
+        
     def get_user_by_id(self, user_id):
         try:
             with self.conn.cursor() as cursor:
@@ -66,22 +86,28 @@ class UsersDAO:
         except pymysql.MySQLError as e:
             print(f"[ERROR] get_user_by_email: {e}")
             return None
+        
+ 
 
-    def update_user_email(self, username, new_email):
+    def update_user_password(self, username, email, new_password):
         try:
             with self.conn.cursor() as cursor:
                 sql = """
                     UPDATE users
-                    SET email = %s
-                    WHERE username = %s
+                    SET password_hash = %s
+                    WHERE username = %s AND email = %s
                 """
-                cursor.execute(sql, (new_email, username))
+                hashed_password = generate_password_hash(new_password)
+                cursor.execute(sql, (hashed_password, username, email))
                 self.conn.commit()
-                return cursor.rowcount
+                return cursor.rowcount  # number of rows updated
         except pymysql.MySQLError as e:
-            print(f"[ERROR] update_user_email: {e}")
+            print(f"[ERROR] update_user_password: {e}")
             self.conn.rollback()
             return None
+
+
+        
         
     def delete_user(self, user_id):
         try:
