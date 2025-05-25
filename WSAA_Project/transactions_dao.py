@@ -42,10 +42,18 @@ class TransactionsDAO:
             self.conn.rollback()
             return None
 
+
+        
     def get_transaction_by_id(self, transaction_id):
         try:
             with self.conn.cursor() as cursor:
-                sql = "SELECT * FROM transactions WHERE transaction_id = %s"
+                sql = """
+                      SELECT t.transaction_id, t.stock_id, s.stock_symbol, t.transaction_type, t.quantity, t.price_per_share, t.transaction_date
+                      FROM transactions t 
+                      INNER JOIN stocks s 
+                      ON t.stock_id = s.stock_id 
+                      WHERE t.transaction_id = %s
+                """
                 cursor.execute(sql, (transaction_id,))
                 return cursor.fetchone()
         except pymysql.MySQLError as e:
@@ -55,17 +63,29 @@ class TransactionsDAO:
     def get_transactions_by_user_id(self, user_id):
         try:
             with self.conn.cursor() as cursor:
-                sql = "SELECT * FROM transactions WHERE user_id = %s"
+                sql ="""
+                      SELECT t.transaction_id, t.user_id, t.stock_id, s.stock_symbol, t.transaction_type, t.quantity, t.price_per_share, t.transaction_date
+                      FROM transactions t 
+                      INNER JOIN stocks s 
+                      ON t.stock_id = s.stock_id 
+                      WHERE user_id = %s
+                """
                 cursor.execute(sql, (user_id,))
                 return cursor.fetchall()
         except pymysql.MySQLError as e:
             print(f"[ERROR] get_transactions_by_user_id: {e}")
             return None
-
+   
     def get_transactions_by_stock_id(self, stock_id):
         try:
             with self.conn.cursor() as cursor:
-                sql = "SELECT * FROM transactions WHERE stock_id = %s"
+                sql ="""
+                      SELECT t.transaction_id, t.user_id, t.stock_id, s.stock_symbol, t.transaction_type, t.quantity, t.price_per_share, t.transaction_date
+                      FROM transactions t 
+                      INNER JOIN stocks s 
+                      ON t.stock_id = s.stock_id 
+                      WHERE stock_id = %s
+                """
                 cursor.execute(sql, (stock_id,))
                 return cursor.fetchall()
         except pymysql.MySQLError as e:
@@ -115,3 +135,5 @@ class TransactionsDAO:
             print(f"[ERROR] delete_transaction: {e}")
             self.conn.rollback()
             return None
+        
+transactions_dao = TransactionsDAO()
