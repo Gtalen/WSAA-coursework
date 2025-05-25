@@ -3,13 +3,13 @@ import random
 from faker import Faker
 import pymysql
 import sql_connect
-import db_data_import
+import stocks_data
 
 # Initialize Faker
 fake = Faker(["en_IE", "en_US", "en_GB"])
 Faker.seed(10)
 def generate_transaction_data():
-    stocks = db_data_import.load_stocks_json()  # Load stock data from JSON file
+    stocks = stocks_data.load_stocks_json()  # Load stock data from JSON file
     conn = sql_connect.connect_mysql()  # Connect to MySQL
 
     if not conn:
