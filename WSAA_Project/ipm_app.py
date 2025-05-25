@@ -24,8 +24,8 @@ def home():
 
 # USER ROUTES
 
-@app.route("/api/user/form", methods=['GET'])
-def user_form():
+@app.route("/user", methods=['GET'])
+def user():
     return render_template("ipm_user.html")
 
 # Get all users
@@ -134,9 +134,9 @@ def delete_user(user_id):
 
 # STOCK ROUTES
 
-# Render stock form
-@app.route("/api/stocks/form", methods=['GET'])
-def stock_form():
+# Render stocks
+@app.route("/stocks", methods=['GET'])
+def stocks():
     return render_template("ipm_stock.html")
 
 # Create a new stock
@@ -236,8 +236,8 @@ def delete_stock(stock_id):
 # TRANSACTION ROUTES
 
 # Render transaction form
-@app.route("/api/transactions/form", methods=['GET'])
-def transaction_form():
+@app.route("/transactions", methods=['GET'])
+def transactions():
     return render_template("ipm_transaction.html")
 
 # Create transaction
