@@ -1,19 +1,20 @@
 """
 ---------------------------------------------------------------
-Fetching stock symbols from Yahoo Finance
+Fetching stock data from Yahoo Stock Screener
 ---------------------------------------------------------------
 Author: Ebelechukwu Igwagu
 ---------------------------------------------------------------
-This script fetches stock symbols from Yahoo Finance and saves them to a JSON file.
+This script fetches stock data from Yahoo Finance and saves them to a JSON file. 
+These were used to populate the stocks table in the investment portfolio management system and also 
+to simulate initial prices for the transaction table.
 """
 
-import requests
 import json
 import time
-import os
+import requests
 
 # Soecifies the file path to save the JSON data
-file_path = r"C:\Users\great\Desktop\ATU\Year 2\Sem 1\web services and applications\WSAA-coursework\WSAA_Project/stock_symbols.json"
+file_path = r"C:\Users\great\Desktop\ATU\Year 2\Sem 1\web services and applications\WSAA-coursework\WSAA_Project/stocks.json"
 
 # Yahoo Finance Screener Endpoint
 url = "https://query1.finance.yahoo.com/v1/finance/screener/predefined/saved?scrIds=most_actives&count=50"
@@ -39,14 +40,6 @@ try:
 
 except requests.RequestException as e:
     print(f"Error fetching stock data: {e}")
-
-# Extracting the stock symbols from the JSON data
-stocks = data["finance"]["result"][0]["quotes"]
-for stock in stocks:
-    symbol = stock.get("symbol")
-    display_name = stock.get("displayName")
-    longName = stock.get("longName")
-    print(f"{symbol}, {display_name}, {longName}")
 
 
 
