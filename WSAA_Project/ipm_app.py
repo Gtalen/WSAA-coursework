@@ -1,3 +1,13 @@
+"""
+---------------------------------------------------
+INVESTMENT PORTFOLIO MANAGEMENT APPLICATION SERVER
+---------------------------------------------------
+Author: Ebelechukwu Igwagu
+------------------------------------
+This module sets up the Flask application for the Investment Portfolio Management System (IPM).
+It includes routes for user management, stock management, and transaction management.
+"""
+
 from flask import Flask, request, jsonify, redirect, render_template
 from flask_cors import CORS, cross_origin
 from users_dao import UsersDAO
@@ -7,8 +17,8 @@ from werkzeug.security import generate_password_hash
 
 
 app = Flask(__name__)
-#CORS(app) # Enable CORS for all routes
-CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
+CORS(app) # Enable CORS for all routes
+#CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 
 
 users_dao = UsersDAO()

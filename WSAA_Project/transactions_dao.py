@@ -8,10 +8,8 @@ This module provides the Data Access Object (DAO) for the transactions table in 
 It includes methods for creating, reading, updating, and deleting (CRUD) transactions in the investment portfolio management system.
 """
 
-
 import pymysql
 import sql_connect
-
 
 # DAO class for handling transactions in the investment portfolio management system
 

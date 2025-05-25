@@ -1,7 +1,18 @@
+"""
+-------------------------------
+STOCKS DATA GENERATION SCRIPT
+-------------------------------
+Author: Ebelechukwu Igwagu
+-------------------------------
+This script generates stock data for the Investment Portfolio Management System.
+It loads stock data from a JSON file containing request response from Yahoo Screener.
+This was used to populate the stock table in my IPM Database.
+"""
+
 from pathlib import Path
+import json
 import pymysql
 import sql_connect
-import json
 
 
 
