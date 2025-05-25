@@ -12,6 +12,8 @@ import random
 import pymysql
 from faker import Faker
 import sql_connect
+from werkzeug.security import generate_password_hash
+
 
 
 # Initialize Faker
@@ -31,7 +33,8 @@ def generate_user_data(num_users=50):
                 fullname = f"{first_name} {last_name}"
                 username = fake.unique.user_name()
                 email = f"{first_name.lower()}.{last_name.lower()}@{random.choice(email_domains)}"
-                password_hash = fake.sha256()
+                plain_password = fake.password(length=12)
+                password_hash = generate_password_hash(plain_password)
                 dob = fake.date_of_birth(minimum_age=18, maximum_age=70)
                 created_at = fake.date_time_between(start_date='-2y', end_date='now')
 
