@@ -187,3 +187,6 @@ config.py
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+config.py
+.env
