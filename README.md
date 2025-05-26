@@ -168,7 +168,7 @@ Understanding Object-Oriented Programming (OOP) principles was guided by [RealPy
 
 3. **Configure your MySQL database:**
 
-- Create the database schema as per the sql/schema.sql file.
+- Create the database schema and tables using the respective scripts.
 - Update your database connection settings in sql_connect.py.
 
 4. **Run the Flask app:**`
