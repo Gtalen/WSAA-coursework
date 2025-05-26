@@ -57,12 +57,7 @@ ipm/
 
 ### Database design
 
-The Investment Portfolio database comprises three tables: **Users**, **Stocks**, and **Transactions**. Scripts for creating the database schema can be accessed [here](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/db_schema.py).
-
-The design aligns with best practices described by:
-
-- [Kumaresh, 2024: Schema Design Guide](https://medium.com/@saikumaresh/a-comprehensive-guide-to-schema-design-in-sql-principles-best-practices-and-a-practical-use-case-d10f87777cef)
-- [Microsoft Database Design Basics](https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5)
+The Investment Portfolio database comprises three tables: **Users**, **Stocks**, and **Transactions**. Scripts for creating the database schema can be accessed [here](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/db_schema.py). The design aligns with best practices described by [Kumaresh, 2024: Schema Design Guide](https://medium.com/@saikumaresh/a-comprehensive-guide-to-schema-design-in-sql-principles-best-practices-and-a-practical-use-case-d10f87777cef) and [Microsoft Database Design Basics](https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5).
 
 #### Table Data Population
 
@@ -92,7 +87,7 @@ Understanding Object-Oriented Programming (OOP) principles was guided by [RealPy
 
 ### Features and API Endpoints
 
-| **Feature     **     | **Functionality**                                      |
+| **Feature**          | **Functionality**                                      |
 |----------------------|--------------------------------------------------------|
 | User Management      | Register, view, reset passwords, and delete users      |
 | Stock Management     | Create, view, update, delete, and search stocks        |
@@ -205,11 +200,11 @@ Author: Ebelechukwu Igwagu
 - **RealPython**, **Datacamp**, and **W3Schools** for excellent tutorials.
 - ChatGPT AI (2025). This assisted with technical explanations and productivity, particularly for debugging and implementing jQuery AJAX for front-end interaction. The scope, logic, and design decisions of the project remain fully original to the author. Some of the Prompts used were;
 
-- How do I implement jQuery AJAX in my Flask app?
-- Help me connect frontend user.html to my Flask backend.
-- Why is my AJAX call not returning data from Flask?
-- How do I use Bootstrap buttons and components?
-- Is there a way to use python to generate fake people data?
+          >  How do I implement jQuery AJAX in my Flask app?
+          > Help me connect frontend user.html to my Flask backend.
+          > Why is my AJAX call not returning data from Flask?
+          > How do I use Bootstrap buttons and components?
+          > Is there a way to use python to generate fake people data?
 
 ---
 
