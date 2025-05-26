@@ -27,101 +27,123 @@ This repository contains my assignments and project submissions for the Web Serv
 
 ## Project - Investment Portfolio Management System(IPM)
 
-This is a web service application for managing investment portfolios, including user accounts, stock information, and transactions. This webapplication is hosted (here)[https://gtalen.pythonanywhere.com/]
+This is a Flask based web service application for managing investment portfolios. This webapplication is hosted [here](https://gtalen.pythonanywhere.com/).The app interfaces with a MySQL database and uses AJAX and HTML for the frontend interface.
 
----
-
-## Project Overview
-
-The Investment Portfolio Management System (IPM) allows users to manage their stock investments through a user-friendly web interface and RESTful API backend. It supports user registration, stock management, and transaction tracking (buy/sell) which are implementation of CRUD operations using HTML methods. The app is designed with modular data access object classes to handle database operations using python. 
+The Investment Portfolio Management System (IPM) allows users to manage their stock investments through a user-friendly web interface and RESTful API backend. It supports user registration, stock management, and transaction tracking (buy/sell) which are implementation of CRUD operations using HTML methods. The app is designed with modular data access object classes to handle database operations using python.
 
 ---
 
 ### Project Structure
 
-The Investment portfolio database has three tables; Users, Stocks and transactions and the scripts for creating the database can be accessed (here)(https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/db_schema.py).
+```bash
 
-The database design followed best practices and principles outlined by [(Kumaresh, 2024)](https://medium.com/@saikumaresh/a-comprehensive-guide-to-schema-design-in-sql-principles-best-practices-and-a-practical-use-case-d10f87777cef) and [Microsoft Database Design Basics](https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5)
-
-
-```
 ipm/
 │
-├── app.py                      # Flask application and routes
-├── users_dao.py               # Data access for users
-├── stocks_dao.py              # Data access for stocks
+├── app.py                     # Flask application and routes
+├── users_dao.py               # Data access object for users
+├── stocks_dao.py              # Data access object for stocks
 ├── transactions_dao.py        # Data access for transactions
-├── sql_connect.py             # MySQL database connection helper
+├── sql_connect.py             # MySQL database connector
 ├── templates/
 │   ├── ipm_base.html          # Base HTML
 │   ├── ipm_user.html          # User management UI
 │   ├── ipm_stock.html         # Stock management UI
 │   └── ipm_transaction.html   # Transaction management UI
-├── static/                    # CSS, JS, images, etc.
+├── static/                    # images
 ├── requirements.txt           # Python dependencies
 └── README.md                  # Project documentation
 
 ```
 
-The user table was initially populated using fake 50 user data generated with python Faker using the (Faker documentation)(Faker documentation.) [https://faker.readthedocs.io/en/master/fakerclass.html] and the useful article from (Datacamp)[https://www.datacamp.com/tutorial/creating-synthetic-data-with-python-faker-tutorial] as a guide. The individual scripts can be accessed from the (user_data)[https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/user_data.py], (stock_data)[https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/stocks_data.py] and (transactions_data)(https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/transactions_data.py) for the respective tables. The stock data was populated using data gotten from (Yahoo Screener)(https://finance.yahoo.com/research-hub/screener/) via url (request)[https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/stock_symbols.py]
+### Database design
 
+The Investment Portfolio database comprises three tables: **Users**, **Stocks**, and **Transactions**. Scripts for creating the database schema can be accessed [here](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/db_schema.py).
 
-Three classes of Data Access Object(DAO) was set up for the three tables and these were written with Pymysql. (Amos)( https://realpython.com/python3-object-oriented-programming/) overview of object oriented programming provided the much needed insight on on OOP and its Class use in DAO. The DAO can be accessed from (userDAO)[https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/users_dao.py], (stocksDAO)[https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/stocks_dao.py] and (transactionsdao)[https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/transactions_dao.py].
+The design aligns with best practices described by:
 
-The main application {"ipm_app.py"} was set up with Flask and the frontend using html, AJAX and CSS. W3 school tutorials provided useful sample codes and foundational knowledge in these languages such as for for creating html forms, tables and CSS styling used in the frontend development.
+- [Kumaresh, 2024: Schema Design Guide](https://medium.com/@saikumaresh/a-comprehensive-guide-to-schema-design-in-sql-principles-best-practices-and-a-practical-use-case-d10f87777cef)
+- [Microsoft Database Design Basics](https://support.microsoft.com/en-us/office/database-design-basics-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5)
 
----
+#### Table Data Population
 
-### IPM Features and API Endpoints
+- **Users**: Initially populated with 50 synthetic user records using the [Faker library](https://faker.readthedocs.io/en/master/fakerclass.html), guided by this [Datacamp tutorial](https://www.datacamp.com/tutorial/creating-synthetic-data-with-python-faker-tutorial).
+  - Script: [`user_data.py`](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/user_data.py)
 
-#### 👤 **User Management**
+- **Stocks**: Populated using stock data from [Yahoo Screener](https://finance.yahoo.com/research-hub/screener/) via HTTP request.
+  - Script: [`stocks_data.py`](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/stocks_data.py)
+  - Request Handler: [`stock_symbols.py`](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/stock_symbols.py)
 
-| **Features** | **API Endpoints** |
-|--------------|-------------------|
-| - Register new users  <br> - View user profiles  <br> - Reset passwords  <br> - Delete accounts | `GET /api/users` — Get all users  <br> `GET /api/users/<user_id>` — Get user by ID  <br> `GET /api/users/email?email=<email>` — Get user by email  <br> `POST /api/users/new-user` — Create new user  <br> `PUT /api/users/reset_password` — Reset password  <br> `DELETE /api/users/<user_id>` — Delete user |
-
-
-#### 📈 **Stock Management**
-
-| **Features** | **API Endpoints** |
-|--------------|-------------------|
-| - Create, view, update, delete stocks  <br> - Search by ID or symbol | `GET /api/stocks` — List all stocks  <br> `GET /api/stocks/<stock_id>` — Get stock by ID  <br> `GET /api/stocks/symbol/<symbol>` — Get stock by symbol  <br> `POST /api/stocks` — Create stock  <br> `PUT /api/stocks/<stock_id>` — Update stock  <br> `DELETE /api/stocks/<stock_id>` — Delete stock |
+- **Transactions**: Simulated buy/sell activities between users and stocks.
+  - Script: [`transactions_data.py`](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/transactions_data.py)
 
 ---
 
-#### 💰 **Transaction Management**
+### DAO Architecture
 
-| **Features** | **API Endpoints** |
-|--------------|-------------------|
-| - Create buy/sell transactions  <br> - View transactions by user or stock  <br> - Update or delete transactions | `GET /api/transactions/<transaction_id>` — Get by ID  <br> `GET /api/transactions/user/<user_id>` — Get by user  <br> `GET /api/transactions/stock/<stock_id>` — Get by stock  <br> `POST /api/transactions` — Create transaction  <br> `PUT /api/transactions/<transaction_id>/quantity` — Update quantity  <br> `PUT /api/transactions/<transaction_id>/price` — Update price  <br> `DELETE /api/transactions/<transaction_id>` — Delete transaction |
+Three DAO classes were created for interacting with the database, written in PyMySQL. These classes abstract the database logic for each table:
+
+- **UsersDAO** → [`users_dao.py`](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/users_dao.py)
+- **StocksDAO** → [`stocks_dao.py`](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/stocks_dao.py)
+- **TransactionsDAO** → [`transactions_dao.py`](https://github.com/Gtalen/WSAA-coursework/blob/main/WSAA_Project/transactions_dao.py)
+
+Understanding Object-Oriented Programming (OOP) principles was guided by [RealPython's OOP tutorial](https://realpython.com/python3-object-oriented-programming/).
 
 ---
 
-> 📌 **Note**: Not all endpoints are yet integrated with the frontend. Use tools like Postman or `curl` for testing.
+### Features and API Endpoints
+
+| **Feature     **     | **Functionality**                                      |
+|----------------------|--------------------------------------------------------|
+| User Management      | Register, view, reset passwords, and delete users      |
+| Stock Management     | Create, view, update, delete, and search stocks        |
+| Transaction Handling | Create, view, update, and delete transactions          |
+| Frontend             | Responsive HTML pages (Users, Stocks, Transactions)    |
 
 
-## IPM Features - CRUD
+---
 
-- **User Management**
-  - Register new users
-  - View user profiles
-  - Reset user passwords
-  - Delete user accounts
+#### API Endpoints — Users
 
-- **Stock Management**
-  - Create, view, update, and delete stock entries
-  - Search stocks by ID or symbol
- 
-- **Transaction Management**
-  - Create buy/sell transactions
-  - View transactions by user or stock
-  - Update transaction quantity
-  - Delete transactions
+| Method | Endpoint                                      | Description                    |
+|--------|-----------------------------------------------|--------------------------------|
+| GET    | `/api/users`                                  | Get all users                  |
+| GET    | `/api/users/<user_id>`                        | Get user by ID                 |
+| GET    | `/api/users/email?email=<email>`              | Get user by email              |
+| POST   | `/api/users/new-user`                         | Register a new user            |
+| PUT    | `/api/users/reset_password`                   | Reset user password            |
+| DELETE | `/api/users/<user_id>`                        | Delete user                    |
 
-- **Frontend**
-  - Responsive HTML pages for Users, Stocks, and Transactions. 
-  - AJAX-based CRUD operations for dynamic interaction.
+#### API Endpoints — Stocks
+
+| Method | Endpoint                                      | Description                    |
+|--------|-----------------------------------------------|--------------------------------|
+| GET    | `/api/stocks`                                 | Get all stocks                 |
+| GET    | `/api/stocks/<stock_id>`                      | Get stock by ID                |
+| GET    | `/api/stocks/symbol/<symbol>`                 | Get stock by symbol            |
+| POST   | `/api/stocks`                                 | Create new stock               |
+| PUT    | `/api/stocks/<stock_id>`                      | Update stock                   |
+| DELETE | `/api/stocks/<stock_id>`                      | Delete stock                   |
+
+#### API Endpoints — Transactions
+
+| Method | Endpoint                                                   | Description                         |
+|--------|------------------------------------------------------------|-------------------------------------|
+| GET    | `/api/transactions/<transaction_id>`                       | Get transaction by ID               |
+| GET    | `/api/transactions/user/<user_id>`                         | Get all user transactions           |
+| GET    | `/api/transactions/stock/<stock_id>`                       | Get transactions for a stock        |
+| POST   | `/api/transactions`                                        | Create a buy/sell transaction       |
+| PUT    | `/api/transactions/<transaction_id>/quantity`             | Update transaction quantity         |
+| PUT    | `/api/transactions/<transaction_id>/price`                | Update transaction price per share  |
+| DELETE | `/api/transactions/<transaction_id>`                      | Delete a transaction                |
+
+---
+
+#### Frontend
+
+- Responsive HTML pages for Users, Stocks, and Transactions. 
+- AJAX-based CRUD operations for dynamic interaction.
   
+>  **Note**: Not all endpoints are yet integrated with the frontend. Use tools like Postman or `curl` for testing.
 
 ---
 
@@ -163,41 +185,6 @@ The main application {"ipm_app.py"} was set up with Flask and the frontend using
 
 ---
 
-### API Endpoints
-
-Note: All endpoints are not yet functional on the frontend, but all can be accessed with either curl or postman.
-
-#### Users:
-
-- GET /api/users — Get all users
-- GET /api/users/<user_id> — Get user by ID
-- GET /api/users/email?email=<email> — Get user by email
-- POST /api/users/new-user — Create new user
-- PUT /api/users/reset_password — Update user password
-- DELETE /api/users/<user_id> — Delete user
-
-#### Stocks:
-
-- GET /api/stocks — List all stocks
-- GET /api/stocks/<stock_id> — Get stock by ID
-- GET /api/stocks/symbol/<symbol> — Get stock by symbol
-- POST /api/stocks — Create new stock
-- PUT /api/stocks/<stock_id> — Update stock
-- DELETE /api/stocks/<stock_id> — Delete stock
-
-#### Transactions:
-
-- GET /api/transactions/<transaction_id> — Get transaction by ID
-- GET /api/transactions/user/<user_id> — Get transactions by user
-- GET /api/transactions/stock/<stock_id> — Get transactions by stock
-- POST /api/transactions — Create new transaction
-- PUT /api/transactions/<transaction_id>/quantity — Update transaction quantity
-- PUT /api/transactions/<transaction_id>/price — Update transaction price
-- DELETE /api/transactions/<transaction_id> — Delete transaction
----
-
----
-
 #### Future Improvements:
 
 - Add user authentication & session management
@@ -213,17 +200,16 @@ Author: Ebelechukwu Igwagu
 
 ### Additional Acknowledgement
 
-ChatGPT AI (2025). Used to assist the author with technical explanations and productivity, particularly for debugging and implementing jQuery AJAX for front-end interaction. The scope, logic, and design decisions of the project remain fully original to the author. Some of the Prompts used were;
+- **Faker** for generating user and transaction data.
+- **Yahoo Finance Screener** for stock data.
+- **RealPython**, **Datacamp**, and **W3Schools** for excellent tutorials.
+- ChatGPT AI (2025). This assisted with technical explanations and productivity, particularly for debugging and implementing jQuery AJAX for front-end interaction. The scope, logic, and design decisions of the project remain fully original to the author. Some of the Prompts used were;
 
 - How do I implement jQuery AJAX in my Flask app?
-
 - Help me connect frontend user.html to my Flask backend.
-
-- Why is my AJAX call not returning data from Flask.
-
-- How do I use Bootstrap buttons and components.
-
-- Is there a way to use python to generate fake fullname of people?
+- Why is my AJAX call not returning data from Flask?
+- How do I use Bootstrap buttons and components?
+- Is there a way to use python to generate fake people data?
 
 ---
 
