@@ -31,11 +31,15 @@ This is a web service application for managing investment portfolios, including 
 
 ## Project Overview
 
-The Investment Portfolio Management System (IPM) allows users to manage their stock investments through a user-friendly web interface and RESTful API backend. It supports user registration, stock management, and transaction tracking (buy/sell). The app is designed with modular data access object classes to handle database operations using python.
+The Investment Portfolio Management System (IPM) allows users to manage their stock investments through a user-friendly web interface and RESTful API backend. It supports user registration, stock management, and transaction tracking (buy/sell). The app is designed with modular data access object classes to handle database operations using python. The Investment portfolio database has three tables; Users, Stocks and transactions. 
+
+The user table was initially populated using fake 50 user data generated with python Faker using the [Faker documentation](Faker documentation. (https://faker.readthedocs.io/en/master/fakerclass.html) and the useful article from [Datacamp](https://www.datacamp.com/tutorial/creating-synthetic-data-with-python-faker-tutorial).
+
+
 
 ---
 
-## Features
+## IPM Features
 
 - **User Management**
   - Register new users
@@ -46,17 +50,17 @@ The Investment Portfolio Management System (IPM) allows users to manage their st
 - **Stock Management**
   - Create, view, update, and delete stock entries
   - Search stocks by ID or symbol
-  - Track user holdings per stock
-
+ 
 - **Transaction Management**
   - Create buy/sell transactions
   - View transactions by user or stock
-  - Update transaction quantity and price
+  - Update transaction quantity
   - Delete transactions
 
 - **Frontend**
-  - Responsive HTML pages for Users, Stocks, and Transactions
-  - AJAX-based CRUD operations for dynamic interaction
+  - Responsive HTML pages for Users, Stocks, and Transactions. 
+  - AJAX-based CRUD operations for dynamic interaction.
+  W3 school tutorials was quite helpful in creating html forms, table and introduction to these slanguages used in frontend development.
 
 ---
 
@@ -134,20 +138,19 @@ Note: All endpoints are not yet functional on the frontend, but all can be acces
 
 ipm/
 │
-├── app.py                      # Flask application and routes
-├── users_dao.py               # Data access for users
-├── stocks_dao.py              # Data access for stocks
-├── transactions_dao.py        # Data access for transactions
-├── sql_connect.py             # MySQL database connection helper
+├── app.py                      
+├── users_dao.py              
+├── stocks_dao.py             
+├── transactions_dao.py        
+├── sql_connect.py          
 ├── templates/
-│   ├── ipm_base.html          # Base HTML
-│   ├── ipm_user.html          # User management UI
-│   ├── ipm_stock.html         # Stock management UI
-│   └── ipm_transaction.html   # Transaction management UI
-├── static/                    # CLogo image
-├── requirements.txt           # Python dependencies
-└── README.md                  # Project documentation
-
+│   ├── ipm_base.html         
+│   ├── ipm_user.html         
+│   ├── ipm_stock.html        
+│   └── ipm_transaction.html  
+├── static/                    
+├── requirements.txt          
+└── README.md                 
 ---
 
 #### Future Improvements:
@@ -197,5 +200,14 @@ This project is available under the MIT license.
 - Yahoo Finance Screeners (n.d.). Available at: https://finance.yahoo.com/research-hub/screener/ 
 
 Additional Acknowledgement:
-ChatGPT AI (2025). Used to assist the author with technical explanations and productivity, particularly for debugging and implementing jQuery AJAX for front-end interaction. The scope, logic, and design decisions of the project remain fully original to the author.
+ChatGPT AI (2025). Used to assist the author with technical explanations and productivity, particularly for debugging and implementing jQuery AJAX for front-end interaction. The scope, logic, and design decisions of the project remain fully original to the author. Some of the Prompts used were;
 
+- How do I implement jQuery AJAX in my Flask app?
+
+- Help me connect frontend user.html to my Flask backend.
+
+- Why is my AJAX call not returning data from Flask.
+
+- How do I use Bootstrap buttons and components.
+
+- Is there a way to use python to generate fake fullname of people?
