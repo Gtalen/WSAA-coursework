@@ -8,8 +8,9 @@ This module handles the connection to a MySQL database and provides functions fo
 manipulating data using the `pymysql` library.
 """
 
-# Import dependency
+# Import dependencies
 import pymysql
+from config import username, password, database  # Import database credentials from config
 
 # initializes the variable conn to none
 conn = None
@@ -21,9 +22,9 @@ def connect_mysql():
         # Create connection
         conn = pymysql.connect(
             host='localhost',
-            user='root',
-            password='root',
-            database='investment_portfolio_db',  # SQL database name
+            user=username,
+            password=password,
+            database=database,  # SQL database name
             cursorclass=pymysql.cursors.DictCursor #sets the cursor to the dict cursor
         )
         #print("Connection to the database is succesful.")
