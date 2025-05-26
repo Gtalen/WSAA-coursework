@@ -24,7 +24,7 @@ This repository contains my assignments and project submissions for the Web Serv
 
 # Investment Portfolio Management System (IPM)
 
-This is a web service application for managing investment portfolios, including user accounts, stock information, and transactions.
+This is a web service application for managing investment portfolios, including user accounts, stock information, and transactions. This webapplication is hosted (here)[https://gtalen.pythonanywhere.com/]
 
 ---
 
@@ -33,7 +33,7 @@ This is a web service application for managing investment portfolios, including 
 
 The Investment Portfolio Management System (IPM) allows users to manage their stock investments through a user-friendly web interface and RESTful API backend. It supports user registration, stock management, and transaction tracking (buy/sell). The app is designed with modular data access object classes to handle database operations using python. The Investment portfolio database has three tables; Users, Stocks and transactions. 
 
-The user table was initially populated using fake 50 user data generated with python Faker using the [Faker documentation](Faker documentation. (https://faker.readthedocs.io/en/master/fakerclass.html) and the useful article from [Datacamp](https://www.datacamp.com/tutorial/creating-synthetic-data-with-python-faker-tutorial).
+The user table was initially populated using fake 50 user data generated with python Faker using the (Faker documentation)(Faker documentation. [https://faker.readthedocs.io/en/master/fakerclass.html] and the useful article from (Datacamp)[https://www.datacamp.com/tutorial/creating-synthetic-data-with-python-faker-tutorial].
 
 
 
