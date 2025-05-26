@@ -10,7 +10,7 @@ It includes methods for creating, reading, updating, and deleting (CRUD) stock r
 
 import pymysql
 import sql_connect  # Connect to MySQL database
-from datetime import datetime
+
 
 
 class StocksDAO:
@@ -126,4 +126,6 @@ class StocksDAO:
             cursor.execute(sql, (user_id, stock_id))
             result = cursor.fetchone()
             return result['current_quantity'] if result else 0
+
+stocks_dao = StocksDAO()
     

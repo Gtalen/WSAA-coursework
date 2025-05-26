@@ -8,8 +8,8 @@ This module sets up the Flask application for the Investment Portfolio Managemen
 It includes routes for user management, stock management, and transaction management.
 """
 
-from flask import Flask, request, jsonify, redirect, render_template
-from flask_cors import CORS, cross_origin
+from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 from users_dao import UsersDAO
 from stocks_dao import StocksDAO
 from transactions_dao import TransactionsDAO

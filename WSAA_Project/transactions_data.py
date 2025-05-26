@@ -1,3 +1,14 @@
+"""
+-----------------------------------
+TRANSACTION DATA GENERATION SCRIPT
+-----------------------------------
+Author: Ebelechukwu Igwagu
+-----------------------------------
+This script generates random transaction data for users in the IPM
+Price simulation was done using current market prices from Yahoo Screener
+which was used to populate the transactions table.
+"""
+
 from datetime import datetime
 import random
 from faker import Faker
