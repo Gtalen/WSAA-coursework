@@ -42,7 +42,7 @@ ipm/
 ├── app.py                     # Flask application and routes
 ├── users_dao.py               # Data access object for users
 ├── stocks_dao.py              # Data access object for stocks
-├── transactions_dao.py        # Data access for transactions
+├── transactions_dao.py        # Data access object for   transactions
 ├── sql_connect.py             # MySQL database connector
 ├── templates/
 │   ├── ipm_base.html          # Base HTML
@@ -149,7 +149,7 @@ Understanding Object-Oriented Programming (OOP) principles was guided by [RealPy
 - Database: MySQL 
 - Authentication: Password hashing with Werkzeug security
 - API: RESTful endpoints for CRUD operations
-- Others: Flask-CORS nabled to support frontend-backend communication during development.
+- Others: Flask-CORS enabled to support frontend-backend communication during development.
 
 ---
 
