@@ -66,7 +66,7 @@ def create_stocks_table():
     conn = sql_connect.connect_mysql()
     if conn:
         try:
-            with conn.cursor() as cursor:  # You missed () after conn.cursor
+            with conn.cursor() as cursor: 
                query = """
                 CREATE TABLE IF NOT EXISTS stocks (
                     stock_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -92,7 +92,7 @@ def create_table_transactions():
     conn = sql_connect.connect_mysql()
     if conn:
         try:
-            with conn.cursor() as cursor:  # ← FIXED: Added parentheses
+            with conn.cursor() as cursor:  
                 query = """
                 CREATE TABLE IF NOT EXISTS transactions (
                     transaction_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -109,7 +109,7 @@ def create_table_transactions():
                 cursor.execute(query)
                 print("Transactions table created successfully.")
             conn.commit()
-        except pymysql.MySQLError as e:  # ← FIXED: Typo in Exception Name
+        except pymysql.MySQLError as e:
             print(f"Error creating transactions table: {e}")
         finally:
             conn.close()
@@ -118,7 +118,7 @@ def create_table_transactions():
 
 
 def main():
-    create_database_schema()  # Call your schema creation function
+    create_database_schema()  # Call thr schema creation function
     create_users_table()  # Call the function to create the Users table
     create_stocks_table()  # Call the function to create the stocks table
     create_table_transactions()  # Call the function to create the transactions table
