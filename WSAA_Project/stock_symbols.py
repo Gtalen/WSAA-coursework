@@ -13,7 +13,7 @@ import json
 import time
 import requests
 
-# Soecifies the file path to save the JSON data
+#
 file_path = r"C:\Users\great\Desktop\ATU\Year 2\Sem 1\web services and applications\WSAA-coursework\WSAA_Project/stocks.json"
 
 # Yahoo Finance Screener Endpoint
@@ -26,9 +26,9 @@ try:
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
     }
-    # Get the data from Yahoo Finance WITH headers
+  
     response = requests.get(url, headers=headers)
-    response.raise_for_status()  # Raises an HTTPError if the response was an error
+    response.raise_for_status()  
 
     data = response.json()
 
